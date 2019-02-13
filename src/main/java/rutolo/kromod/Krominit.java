@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import rutolo.kromod.blocks.BloqueMagico;
 import rutolo.kromod.blocks.OreMagico;
+import rutolo.kromod.items.ComidaMagica;
 import rutolo.kromod.items.ItemMagico;
 
 @Mod.EventBusSubscriber(modid=Referencia.MODID)
@@ -47,9 +48,11 @@ public class Krominit {
 	// static String escotracoIngot = Referencia.escotracoIngot;
 	static String escotracoDust = Referencia.escotracoDust;
 	static String escotracoOre = Referencia.escotracoOre;
+	static String galletaMagica = Referencia.galletaMagica;
 	
 	public static void init() {
 		items.put(cetro, new ItemMagico(cetro).setMaxStackSize(1));
+		items.put(galletaMagica, new ComidaMagica(galletaMagica, 3, 0.5f, false).setMaxStackSize(8));
 		
 		bloques.put(oricalcoOre, new OreMagico(oricalcoOre));
 		items.put(oricalcoIngot, new ItemMagico(oricalcoIngot));

@@ -14,4 +14,5 @@ public class Referencia {
 	public static String escotracoIngot = "escotraco_ingot";
 	public static String escotracoDust = "escotraco_dust";
 	public static String escotracoOre = "escotraco_ore";
+	public static String galletaMagica = "galleta_magica";
 }
