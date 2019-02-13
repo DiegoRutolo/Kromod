@@ -36,17 +36,17 @@ public class Krominit {
 			}.setBackgroundImageName("item_search.png");
 	
 	// estas listas contienen todos los objetos
-	static Map<String,Item>		items	= new HashMap<String,Item>();
-	static Map<String,Block>	bloques	= new HashMap<String,Block>();
+	public static Map<String,Item>	items	= new HashMap<String,Item>();
+	public static Map<String,Block>	bloques	= new HashMap<String,Block>();
 	
 	// nombres de los objetos, porque no me apetece equivocarme cada vez que tengo que escribir la String
-	static String cetro = "cetro";
-	static String oricalcoOre = "oricalco_ore";
-	static String oricalcoIngot = "oricalco_ingot";
-	static String oricalcoBlock = "oricalco_block";
-	static String escotracoIngot = "escotraco_ingot";
-	static String escotracoDust = "escotraco_dust";
-	static String escotracoOre = "escotraco_ore";
+	static String cetro = Referencia.cetro;
+	static String oricalcoOre = Referencia.oricalcoOre;
+	static String oricalcoIngot = Referencia.oricalcoIngot;
+	static String oricalcoBlock = Referencia.oricalcoBlock;
+	// static String escotracoIngot = Referencia.escotracoIngot;
+	static String escotracoDust = Referencia.escotracoDust;
+	static String escotracoOre = Referencia.escotracoOre;
 	
 	public static void init() {
 		items.put(cetro, new ItemMagico(cetro).setMaxStackSize(1));
@@ -57,13 +57,13 @@ public class Krominit {
 		bloques.get(oricalcoBlock).setHardness(2f);
 		bloques.get(oricalcoBlock).setHarvestLevel("pickaxe", 2);
 		
-		items.put(escotracoIngot, new ItemMagico(escotracoIngot));
+		// items.put(escotracoIngot, new ItemMagico(escotracoIngot));
 		items.put(escotracoDust, new ItemMagico(escotracoDust).setMaxStackSize(16));
 		bloques.put(escotracoOre, new OreMagico(escotracoOre, items.get(escotracoDust), 1, 3));
 	}
 	
 	public static void recetas() {
-		GameRegistry.addSmelting(bloques.get(oricalcoBlock), new ItemStack(items.get(oricalcoIngot)), 0.9f);
+		GameRegistry.addSmelting(bloques.get(oricalcoOre), new ItemStack(items.get(oricalcoIngot)), 0.9f);
 	}
 	
 	@SubscribeEvent
