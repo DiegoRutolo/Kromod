@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import rutolo.kromod.blocks.BloqueMagico;
 import rutolo.kromod.blocks.OreMagico;
+import rutolo.kromod.items.CetroMagico;
 import rutolo.kromod.items.ComidaMagica;
 import rutolo.kromod.items.ItemMagico;
 
@@ -51,7 +52,7 @@ public class Krominit {
 	static String galletaMagica = Referencia.galletaMagica;
 	
 	public static void init() {
-		items.put(cetro, new ItemMagico(cetro).setMaxStackSize(1));
+		items.put(cetro, new CetroMagico(cetro));
 		items.put(galletaMagica, new ComidaMagica(galletaMagica, 3, 0.5f, false).setMaxStackSize(8));
 		
 		bloques.put(oricalcoOre, new OreMagico(oricalcoOre));
