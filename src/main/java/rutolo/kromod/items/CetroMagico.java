@@ -6,7 +6,9 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+import rutolo.kromod.Referencia;
 import rutolo.kromod.hechizos.BolaDeFuego;
+import rutolo.kromod.hechizos.Hechizo;
 
 public class CetroMagico extends ItemMagico {
 	
@@ -17,8 +19,8 @@ public class CetroMagico extends ItemMagico {
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-		BolaDeFuego bolaDeFuego = new BolaDeFuego(worldIn, playerIn);
-		bolaDeFuego.lanza();
+		Hechizo bolaDeFuego = new BolaDeFuego(worldIn, playerIn);
+		bolaDeFuego.lanzar();
 		return new ActionResult<ItemStack>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
     }
 }
