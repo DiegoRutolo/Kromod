@@ -8,6 +8,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+import rutolo.kromod.Referencia;
 
 public class CetroMagico extends ItemMagico {
 	
@@ -24,7 +25,10 @@ public class CetroMagico extends ItemMagico {
 		boladefuego.accelerationX = playerIn.getLookVec().x*vel;
 		boladefuego.accelerationY = playerIn.getLookVec().y*vel;
 		boladefuego.accelerationZ = playerIn.getLookVec().z*vel;
+		Referencia.removeExperience(playerIn, 10);
 		worldIn.spawnEntity(boladefuego);
-        return new ActionResult<ItemStack>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
+		return new ActionResult<ItemStack>(EnumActionResult.PASS, playerIn.getHeldItem(handIn));
     }
+	
+	
 }
