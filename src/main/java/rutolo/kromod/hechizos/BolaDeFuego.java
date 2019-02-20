@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 public class BolaDeFuego extends Hechizo {
 	
 	public BolaDeFuego(World world, EntityPlayer pj) {
-		super(world, pj, 1, 5);
+		super(world, pj, 1);
 	}
 	
 	@Override

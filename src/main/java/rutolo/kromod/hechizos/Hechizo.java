@@ -8,8 +8,8 @@ import rutolo.kromod.Referencia;
 
 public abstract class Hechizo {
 
-	private int coste;
-	private int nivel;
+	int coste;
+	int nivel;
 	protected World world;
 	protected EntityPlayer pj;
 	
