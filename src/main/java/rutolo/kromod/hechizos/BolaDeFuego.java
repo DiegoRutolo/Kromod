@@ -3,7 +3,6 @@ package rutolo.kromod.hechizos;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySmallFireball;
 import net.minecraft.world.World;
-import rutolo.kromod.Referencia;
 
 public class BolaDeFuego extends Hechizo {
 	
