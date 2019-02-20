@@ -9,14 +9,17 @@ public class Referencia {
 	public static final String ACCEPT_MINECRAFT = "[1.12]";
 	
 	// nombres de los objetos, porque no me apetece equivocarme cada vez que tengo que escribir la String
-	public static String cetro = "cetro";
-	public static String oricalcoOre = "oricalco_ore";
-	public static String oricalcoIngot = "oricalco_ingot";
-	public static String oricalcoBlock = "oricalco_block";
-	public static String escotracoIngot = "escotraco_ingot";
-	public static String escotracoDust = "escotraco_dust";
-	public static String escotracoOre = "escotraco_ore";
-	public static String galletaMagica = "galleta_magica";
+	public static final String CETRO = "cetro";
+	public static final String ORICALCO_ORE = "oricalco_ore";
+	public static final String ORICALCO_INGOT = "oricalco_ingot";
+	public static final String ORICALCO_BLOCK = "oricalco_block";
+	public static final String ESCOTRACO_INGOT = "escotraco_ingot";
+	public static final String ESCOTRACO_DUST = "escotraco_dust";
+	public static final String ESCOTRACO_ORE = "escotraco_ore";
+	public static final String GALLETA_MAGICA = "galleta_magica";
+	public static final String GRIMORIO = "grimorio";
+	public static final String PERGAMINO = "pergamino";
+	public static final String FLASH = "flash";
 	
 	public static void removeExperience(EntityPlayer entity, int amount){
 		// https://github.com/TheHacker000/MineMoneyMod/blob/c77731f6563eb2869fce937b4d4fd98803dd215f/src/main/java/com/thehacker/minemoney/ShopSystem.java#L53-L69
@@ -38,6 +41,5 @@ public class Referencia {
             entity.experience = (entity.experience + 1.0F) * (float)entity.xpBarCap();
             entity.addExperienceLevel(-1);
         }
-        System.out.println(entity.experienceTotal);
 	}
 }

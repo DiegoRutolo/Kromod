@@ -42,17 +42,17 @@ public class Krominit {
 	public static Map<String,Block>	bloques	= new HashMap<String,Block>();
 	
 	// nombres de los objetos, porque no me apetece equivocarme cada vez que tengo que escribir la String
-	static String cetro = Referencia.cetro;
-	static String oricalcoOre = Referencia.oricalcoOre;
-	static String oricalcoIngot = Referencia.oricalcoIngot;
-	static String oricalcoBlock = Referencia.oricalcoBlock;
+	static String cetro = Referencia.CETRO;
+	static String oricalcoOre = Referencia.ORICALCO_ORE;
+	static String oricalcoIngot = Referencia.ORICALCO_INGOT;
+	static String oricalcoBlock = Referencia.ORICALCO_BLOCK;
 	// static String escotracoIngot = Referencia.escotracoIngot;
-	static String escotracoDust = Referencia.escotracoDust;
-	static String escotracoOre = Referencia.escotracoOre;
-	static String galletaMagica = Referencia.galletaMagica;
+	static String escotracoDust = Referencia.ESCOTRACO_DUST;
+	static String escotracoOre = Referencia.ESCOTRACO_ORE;
+	static String galletaMagica = Referencia.GALLETA_MAGICA;
 	
 	public static void init() {
-		items.put(cetro, new CetroMagico(cetro));
+		items.put(cetro, new CetroMagico());
 		items.put(galletaMagica, new ComidaMagica(galletaMagica, 3, 0.5f, false).setMaxStackSize(8));
 		
 		bloques.put(oricalcoOre, new OreMagico(oricalcoOre));
@@ -64,6 +64,8 @@ public class Krominit {
 		// items.put(escotracoIngot, new ItemMagico(escotracoIngot));
 		items.put(escotracoDust, new ItemMagico(escotracoDust).setMaxStackSize(16));
 		bloques.put(escotracoOre, new OreMagico(escotracoOre, items.get(escotracoDust), 1, 3));
+		
+		//items.put(Referencia.FLASH, new Pergamino(new Flash()));
 	}
 	
 	public static void recetas() {
