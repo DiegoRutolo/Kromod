@@ -7,13 +7,14 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+import rutolo.kromod.Referencia;
 import rutolo.kromod.hechizos.Flash;
 import rutolo.kromod.hechizos.Hechizo;
 
 public class CetroMagico extends ItemMagico {
 	
-	public CetroMagico(String nombre) {
-		super(nombre);
+	public CetroMagico() {
+		super(Referencia.CETRO);
 		this.setMaxStackSize(1);
 	}
 	
@@ -34,4 +35,9 @@ public class CetroMagico extends ItemMagico {
 			flash.lanzar();
 		}
     }
+	
+	@Override
+	public int getMaxItemUseDuration(ItemStack stack) {
+		return 24*1000;
+	}
 }

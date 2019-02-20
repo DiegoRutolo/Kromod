@@ -24,10 +24,10 @@ public class OreGen implements IWorldGenerator {
 			IChunkProvider chunkProvider) {
 		
 		if (world.provider.getDimension() == 0) {
-			runGenerator(Krominit.bloques.get(Referencia.oricalcoOre).getDefaultState(), 7, 5, 5, 30, 
+			runGenerator(Krominit.bloques.get(Referencia.ORICALCO_ORE).getDefaultState(), 7, 5, 5, 30, 
 					BlockMatcher.forBlock(Blocks.STONE), world, rnd, chunkX, chunkZ);
 			if (world.getBiome(new BlockPos(chunkX*16, 20, chunkZ*16)).equals(Biomes.EXTREME_HILLS) ) {
-				runGenerator(Krominit.bloques.get(Referencia.escotracoOre).getDefaultState(), 20, 2, 5, 50, 
+				runGenerator(Krominit.bloques.get(Referencia.ESCOTRACO_ORE).getDefaultState(), 20, 2, 5, 50, 
 						BlockMatcher.forBlock(Blocks.STONE), world, rnd, chunkX, chunkZ);
 			}
 		}
