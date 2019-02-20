@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"AAA",
+		"AAA",
+		"AAA"
+	],
+	"key": {
+		"A": [{
+			"item": "kromod:oricalco_ingot",
+			"data": 0
+		}]
+	},
+	"result": {
+		"item": "kromod:oricalco_block",
+		"data": 0
+	}
+}
