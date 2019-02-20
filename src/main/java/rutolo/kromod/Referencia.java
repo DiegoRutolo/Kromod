@@ -38,6 +38,5 @@ public class Referencia {
             entity.experience = (entity.experience + 1.0F) * (float)entity.xpBarCap();
             entity.addExperienceLevel(-1);
         }
-        System.out.println(entity.experienceTotal);
 	}
 }
