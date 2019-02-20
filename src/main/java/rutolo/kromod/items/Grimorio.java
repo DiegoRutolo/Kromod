@@ -1,14 +1,50 @@
 package rutolo.kromod.items;
 
+/*
+ * https://github.com/coolAlias/Forge_Tutorials/blob/master/InventoryItemTutorial.java
+ */
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.text.ITextComponent;
+import rutolo.kromod.Referencia;
 
 public class Grimorio extends ItemMagico implements IInventory {
+	
+	private final ItemStack stack;
+	public static final int TAMANHO = 12;
+	private ItemStack[] inventario = new ItemStack[TAMANHO];
+	
 
-	public Grimorio(String nombre) {
-		super(nombre);
+	public Grimorio(ItemStack stack) {
+		super(Referencia.GRIMORIO);
+		this.stack = stack;
+		if (!stack.hasTagCompound()) {
+			stack.setTagCompound(new NBTTagCompound());
+		}
+		readFromNBT(stack.getTagCompound());
+	}
+	
+	@Override
+	public int getSizeInventory() {
+		return TAMANHO;
+	}
+	
+	@Override
+	public ItemStack getStackInSlot(int index) {
+		return inventario[index];
+	}
+	
+	@Override
+	public ItemStack decrStackSize(int index, int count) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void readFromNBT(NBTTagCompound tagCompound) {
+		
 	}
 
 	@Override
@@ -29,11 +65,7 @@ public class Grimorio extends ItemMagico implements IInventory {
 		return null;
 	}
 
-	@Override
-	public int getSizeInventory() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 	@Override
 	public boolean isEmpty() {
@@ -41,17 +73,9 @@ public class Grimorio extends ItemMagico implements IInventory {
 		return false;
 	}
 
-	@Override
-	public ItemStack getStackInSlot(int index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
-	@Override
-	public ItemStack decrStackSize(int index, int count) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public ItemStack removeStackFromSlot(int index) {
