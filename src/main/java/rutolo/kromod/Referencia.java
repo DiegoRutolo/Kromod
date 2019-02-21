@@ -19,7 +19,10 @@ public class Referencia {
 	public static final String GALLETA_MAGICA = "galleta_magica";
 	public static final String GRIMORIO = "grimorio";
 	public static final String PERGAMINO = "pergamino";
-	public static final String FLASH = "flash";
+	
+	//Hechizos
+	public static final String H_FLASH = "h_flash";
+	public static final String H_BOLA_DE_FUEGO = "h_bola_de_fuego";
 	
 	public static void removeExperience(EntityPlayer entity, int amount){
 		// https://github.com/TheHacker000/MineMoneyMod/blob/c77731f6563eb2869fce937b4d4fd98803dd215f/src/main/java/com/thehacker/minemoney/ShopSystem.java#L53-L69

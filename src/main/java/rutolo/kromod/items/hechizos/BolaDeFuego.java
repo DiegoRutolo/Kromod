@@ -1,13 +1,14 @@
-package rutolo.kromod.hechizos;
+package rutolo.kromod.items.hechizos;
 
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySmallFireball;
-import net.minecraft.world.World;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.util.SoundCategory;
+import rutolo.kromod.Referencia;
 
 public class BolaDeFuego extends Hechizo {
 	
-	public BolaDeFuego(World world, EntityPlayer pj) {
-		super(world, pj, 1);
+	public BolaDeFuego() {
+		super(Referencia.H_BOLA_DE_FUEGO, 1);
 	}
 	
 	@Override
@@ -18,6 +19,7 @@ public class BolaDeFuego extends Hechizo {
 		bola.accelerationX = pj.getLookVec().x*vel;
 		bola.accelerationY = pj.getLookVec().y*vel;
 		bola.accelerationZ = pj.getLookVec().z*vel;
+		world.playSound(null, pj.getPosition(), SoundEvents.ENTITY_FIREWORK_LAUNCH, SoundCategory.PLAYERS, 1.0f, 1.0f);
 		this.world.spawnEntity(bola);
 	}
 }

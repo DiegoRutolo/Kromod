@@ -8,8 +8,7 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import rutolo.kromod.Referencia;
-import rutolo.kromod.hechizos.Flash;
-import rutolo.kromod.hechizos.Hechizo;
+import rutolo.kromod.items.hechizos.Hechizo;
 
 public class CetroMagico extends ItemMagico {
 	
@@ -27,12 +26,13 @@ public class CetroMagico extends ItemMagico {
     }
 	
 	@Override
-	public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft) {
-		if (entityLiving instanceof EntityPlayer) {
+	public void onPlayerStoppedUsing(ItemStack stack, World world, EntityLivingBase pj, int timeLeft) {
+		if (pj instanceof EntityPlayer) {
 			//Hechizo bolaDeFuego = new BolaDeFuego(worldIn, (EntityPlayer) entityLiving);
 			//bolaDeFuego.lanzar();
-			Hechizo flash = new Flash(worldIn, (EntityPlayer) entityLiving);
-			flash.lanzar();
+			if (pj.getHeldItemOffhand().getItem() instanceof Hechizo) {
+				((Hechizo) pj.getHeldItemOffhand().getItem()).lanzar(world, (EntityPlayer) pj);
+			}
 		}
     }
 	

@@ -1,13 +1,14 @@
-package rutolo.kromod.hechizos;
+package rutolo.kromod.items.hechizos;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.World;
+import rutolo.kromod.Referencia;
 
 public class Flash extends Hechizo {
 	
-	public Flash(World world, EntityPlayer pj) {
-		super(world, pj, 2);
+	public Flash() {
+		super(Referencia.H_FLASH, 2);
 	}
 
 	@Override
@@ -17,7 +18,7 @@ public class Flash extends Hechizo {
 			double x = r.hitVec.x;
 			double y = r.hitVec.y;
 			double z = r.hitVec.z;
-			
+			world.playSound(null, pj.getPosition(), SoundEvents.ENTITY_ENDERMEN_TELEPORT, SoundCategory.PLAYERS, 1.0f, 1.0f);
 			pj.attemptTeleport(x, y, z);
 		}
 	}
