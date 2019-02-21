@@ -8,9 +8,14 @@ public class ItemMagico extends Item {
 	public final String nombre;
 	
 	public ItemMagico (String nombre) {
+		this(nombre, 1);
+	}
+	
+	public ItemMagico (String nombre, int maxStack) {
 		this.nombre = nombre;
 		setUnlocalizedName(nombre);
 		setRegistryName(nombre);
 		setCreativeTab(Krominit.tabKromod);
+		setMaxStackSize(maxStack);
 	}
 }

@@ -19,7 +19,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import rutolo.kromod.blocks.BloqueMagico;
 import rutolo.kromod.blocks.OreMagico;
 import rutolo.kromod.items.CetroMagico;
-import rutolo.kromod.items.ComidaMagica;
+import rutolo.kromod.items.GalletaMagica;
+import rutolo.kromod.items.Grimorio;
 import rutolo.kromod.items.ItemMagico;
 import rutolo.kromod.items.hechizos.BolaDeFuego;
 import rutolo.kromod.items.hechizos.Flash;
@@ -44,8 +45,7 @@ public class Krominit {
 	public static Map<String,Block>	bloques	= new HashMap<String,Block>();
 	
 	public static void init() {
-		items.put(Referencia.CETRO, new CetroMagico());
-		items.put(Referencia.GALLETA_MAGICA, new ComidaMagica(Referencia.GALLETA_MAGICA, 3, 0.5f, false).setMaxStackSize(8));
+		items.put(Referencia.GALLETA_MAGICA, new GalletaMagica());
 		
 		bloques.put(Referencia.ORICALCO_ORE, new OreMagico(Referencia.ORICALCO_ORE));
 		items.put(Referencia.ORICALCO_INGOT, new ItemMagico(Referencia.ORICALCO_INGOT));
@@ -55,6 +55,9 @@ public class Krominit {
 		
 		items.put(Referencia.ESCOTRACO_DUST, new ItemMagico(Referencia.ESCOTRACO_DUST).setMaxStackSize(16));
 		bloques.put(Referencia.ESCOTRACO_ORE, new OreMagico(Referencia.ESCOTRACO_ORE, items.get(Referencia.ESCOTRACO_DUST), 1, 3));
+		
+		items.put(Referencia.CETRO, new CetroMagico());
+		items.put(Referencia.GRIMORIO, new Grimorio());
 		
 		items.put(Referencia.H_FLASH, new Flash());
 		items.put(Referencia.H_BOLA_DE_FUEGO, new BolaDeFuego());

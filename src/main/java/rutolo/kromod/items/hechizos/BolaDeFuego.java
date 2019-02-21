@@ -12,7 +12,7 @@ public class BolaDeFuego extends Hechizo {
 	}
 	
 	@Override
-	public void paraLanzar() {
+	public void paraLanzar(int carga) {
 		EntitySmallFireball bola = new EntitySmallFireball(this.world, this.pj, 1, 1, 1);
 		float vel = 0.1f;
 		bola.posY = pj.posY+1;

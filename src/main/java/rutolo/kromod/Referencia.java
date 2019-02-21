@@ -9,26 +9,26 @@ public class Referencia {
 	public static final String ACCEPT_MINECRAFT = "[1.12]";
 	
 	// nombres de los objetos, porque no me apetece equivocarme cada vez que tengo que escribir la String
-	public static final String CETRO = "cetro";
 	public static final String ORICALCO_ORE = "oricalco_ore";
 	public static final String ORICALCO_INGOT = "oricalco_ingot";
 	public static final String ORICALCO_BLOCK = "oricalco_block";
-	public static final String ESCOTRACO_INGOT = "escotraco_ingot";
-	public static final String ESCOTRACO_DUST = "escotraco_dust";
 	public static final String ESCOTRACO_ORE = "escotraco_ore";
-	public static final String GALLETA_MAGICA = "galleta_magica";
-	public static final String GRIMORIO = "grimorio";
-	public static final String PERGAMINO = "pergamino";
+	public static final String ESCOTRACO_DUST = "escotraco_dust";
 	
-	//Hechizos
+	public static final String CETRO = "cetro";
+	public static final String GRIMORIO = "grimorio";
+	
 	public static final String H_FLASH = "h_flash";
 	public static final String H_BOLA_DE_FUEGO = "h_bola_de_fuego";
 	
+	public static final String GALLETA_MAGICA = "galleta_magica";
+	
+	
 	public static void removeExperience(EntityPlayer entity, int amount){
-		// https://github.com/TheHacker000/MineMoneyMod/blob/c77731f6563eb2869fce937b4d4fd98803dd215f/src/main/java/com/thehacker/minemoney/ShopSystem.java#L53-L69
 		if (entity.experienceTotal-amount <= 0) {
 			return;
 		}
+		// https://github.com/TheHacker000/MineMoneyMod/blob/c77731f6563eb2869fce937b4d4fd98803dd215f/src/main/java/com/thehacker/minemoney/ShopSystem.java#L53-L69
 		entity.addScore((-1) * amount);
         int j = Integer.MIN_VALUE + entity.experienceTotal;
 

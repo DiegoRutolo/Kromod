@@ -4,11 +4,13 @@ tile.oricalco_block.name=Orichalcum block
 tile.escotraco_ore.name=Skotrackium ore
 tile.oricalco_ore.name=Orichalcum ore
 
-item.cetro.name=Magical scepter
 item.escotraco_dust.name=Skotrackium dust
 item.escotraco_ingot.name=Skotrackium ingot
 item.oricalco_ingot.name=Orichalcum ingot
 item.galleta_magica.name=Magic cookie
+
+item.cetro.name=Magical scepter
+item.grimorio.name=Grimoire
 
 item.h_bola_de_fuego.name=Fireball
 item.h_flash.name=Flash

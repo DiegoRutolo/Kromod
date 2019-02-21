@@ -7,14 +7,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import rutolo.kromod.Krominit;
+import rutolo.kromod.Referencia;
 
-public class ComidaMagica extends ItemFood {
+public class GalletaMagica extends ItemFood {
 	
-	public ComidaMagica(String nom, int cant, float satur, boolean paraLobos) {
-		super(cant, satur, paraLobos);
-		setUnlocalizedName(nom);
-		setRegistryName(nom);
+	public GalletaMagica() {
+		super(3, 0.5f, false);
+		setUnlocalizedName(Referencia.GALLETA_MAGICA);
+		setRegistryName(Referencia.GALLETA_MAGICA);
 		setCreativeTab(Krominit.tabKromod);
+		setMaxStackSize(8);
 	}
 	
 	@Override

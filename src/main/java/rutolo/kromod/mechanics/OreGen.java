@@ -1,4 +1,4 @@
-package rutolo.kromod.gen;
+package rutolo.kromod.mechanics;
 
 import java.util.Random;
 

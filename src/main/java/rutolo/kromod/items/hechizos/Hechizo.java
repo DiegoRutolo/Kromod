@@ -15,26 +15,29 @@ public abstract class Hechizo extends ItemMagico {
 	protected EntityPlayer pj;
 	
 	public Hechizo(String nombre, int nivel) {
-		this(nombre, nivel, 2*nivel);
+		this(nombre, nivel, (int) Math.pow(2, nivel));
 	}
 	
 	public Hechizo(String nombre, int nivel, int coste) {
 		super(nombre);
 		this.nivel = nivel;
 		this.coste = coste;
-		this.setMaxStackSize(1);
 	}
 	
 	public void lanzar(World world, EntityPlayer pj) {
+		lanzar(world, pj, 1);
+	}
+	
+	public void lanzar(World world, EntityPlayer pj, int carga) {
 		this.world = world;
 		this.pj = pj;
 		if (pj.isCreative() || pj.experienceTotal-coste >= 0) {
 			Referencia.removeExperience(pj, coste);
-			this.paraLanzar();
+			this.paraLanzar(carga);
 		} else {
-			pj.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 24*10*nivel, nivel));
+			pj.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, coste, nivel));
 		}
 	}
 	
-	public abstract void paraLanzar();
+	public abstract void paraLanzar(int carga);
 }

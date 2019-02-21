@@ -4,11 +4,13 @@ tile.oricalco_block.name=Bloque de Oricalco
 tile.escotraco_ore.name=Mena de Escotraco
 tile.oricalco_ore.name=Mena de Oricalco
 
-item.cetro.name=Cetro mágico
 item.escotraco_dust.name=Polvo de Escotraco
 item.escotraco_ingot.name=Lingote de Escotraco
 item.oricalco_ingot.name=Lingote de Oricalco
 item.galleta_magica.name=Galleta mágica
+
+item.cetro.name=Cetro mágico
+item.grimorio.name=Grimorio
 
 item.h_bola_de_fuego.name=Bola de Fuego
 item.h_flash.name=Flash

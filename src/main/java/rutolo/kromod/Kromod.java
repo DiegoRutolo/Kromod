@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import rutolo.kromod.gen.OreGen;
+import rutolo.kromod.mechanics.OreGen;
 
 @Mod(modid=Referencia.MODID, name=Referencia.MODNAME, version=Referencia.VERSION, acceptedMinecraftVersions=Referencia.ACCEPT_MINECRAFT)
 public class Kromod {
