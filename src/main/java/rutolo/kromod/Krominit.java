@@ -23,6 +23,7 @@ import rutolo.kromod.items.GalletaMagica;
 import rutolo.kromod.items.Grimorio;
 import rutolo.kromod.items.ItemMagico;
 import rutolo.kromod.items.hechizos.BolaDeFuego;
+import rutolo.kromod.items.hechizos.Empujon;
 import rutolo.kromod.items.hechizos.Flash;
 
 @Mod.EventBusSubscriber(modid=Referencia.MODID)
@@ -61,6 +62,7 @@ public class Krominit {
 		
 		items.put(Referencia.H_FLASH, new Flash());
 		items.put(Referencia.H_BOLA_DE_FUEGO, new BolaDeFuego());
+		items.put(Referencia.H_EMPUJON, new Empujon());
 	}
 	
 	public static void recetas() {
