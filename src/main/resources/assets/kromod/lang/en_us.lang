@@ -7,7 +7,9 @@ tile.oricalco_ore.name=Orichalcum ore
 item.escotraco_dust.name=Skotrackium dust
 item.escotraco_ingot.name=Skotrackium ingot
 item.oricalco_ingot.name=Orichalcum ingot
+
 item.galleta_magica.name=Magic cookie
+item.gema_curacion.name=Healing gem
 
 item.cetro.name=Magical scepter
 item.grimorio.name=Grimoire

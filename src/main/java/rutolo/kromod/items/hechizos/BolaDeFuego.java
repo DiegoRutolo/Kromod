@@ -13,13 +13,15 @@ public class BolaDeFuego extends Hechizo {
 	
 	@Override
 	public void paraLanzar(int carga) {
-		EntitySmallFireball bola = new EntitySmallFireball(this.world, this.pj, 1, 1, 1);
-		float vel = 0.1f;
-		bola.posY = pj.posY+1;
-		bola.accelerationX = pj.getLookVec().x*vel;
-		bola.accelerationY = pj.getLookVec().y*vel;
-		bola.accelerationZ = pj.getLookVec().z*vel;
-		world.playSound(null, pj.getPosition(), SoundEvents.ENTITY_FIREWORK_LAUNCH, SoundCategory.PLAYERS, 1.0f, 1.0f);
-		this.world.spawnEntity(bola);
+		if (!world.isRemote) {
+			EntitySmallFireball bola = new EntitySmallFireball(this.world, this.pj, 1, 1, 1);
+			float vel = 0.1f;
+			bola.posY = pj.posY+1;
+			bola.accelerationX = pj.getLookVec().x*vel;
+			bola.accelerationY = pj.getLookVec().y*vel;
+			bola.accelerationZ = pj.getLookVec().z*vel;
+			this.world.spawnEntity(bola);
+			world.playSound(null, pj.getPosition(), SoundEvents.ENTITY_FIREWORK_LAUNCH, SoundCategory.PLAYERS, 1.0f, 1.0f);
+		}
 	}
 }

@@ -22,6 +22,7 @@ import rutolo.kromod.items.CetroMagico;
 import rutolo.kromod.items.GalletaMagica;
 import rutolo.kromod.items.Grimorio;
 import rutolo.kromod.items.ItemMagico;
+import rutolo.kromod.items.GemaCuracion;
 import rutolo.kromod.items.hechizos.BolaDeFuego;
 import rutolo.kromod.items.hechizos.Empujon;
 import rutolo.kromod.items.hechizos.Flash;
@@ -47,6 +48,7 @@ public class Krominit {
 	
 	public static void init() {
 		items.put(Referencia.GALLETA_MAGICA, new GalletaMagica());
+		items.put(Referencia.GEMA_CURACION, new GemaCuracion());
 		
 		bloques.put(Referencia.ORICALCO_ORE, new OreMagico(Referencia.ORICALCO_ORE));
 		items.put(Referencia.ORICALCO_INGOT, new ItemMagico(Referencia.ORICALCO_INGOT));

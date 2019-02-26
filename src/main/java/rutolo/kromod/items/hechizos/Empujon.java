@@ -14,13 +14,16 @@ public class Empujon extends Hechizo {
 	@Override
 	public void paraLanzar(int carga) {
 		Entity obj = Referencia.getEntityLookingAt();
-		Vec3d v = pj.getLookVec().scale(5);
-		double x = v.x+obj.posX;
-		double y = v.y+obj.posY;
-		double z = v.z+obj.posZ;
-		if (obj != null && !world.isRemote) {
-			System.out.println("\n"+x+"\n"+y+"\n"+z);
-			obj.move(MoverType.SELF, x, y, z);
+		if (obj != null) {
+			Vec3d v = pj.getLookVec().scale(5);
+			double x = v.x+obj.posX;
+			double y = v.y+obj.posY;
+			double z = v.z+obj.posZ;
+			if (true) {
+				System.out.println("\n"+x+"\n"+y+"\n"+z);
+				obj.move(MoverType.PISTON, x, y, z);
+				
+			}
 		}
 	}
 }

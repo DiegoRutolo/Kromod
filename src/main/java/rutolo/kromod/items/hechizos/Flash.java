@@ -14,6 +14,7 @@ public class Flash extends Hechizo {
 	@Override
 	public void paraLanzar(int carga) {
 		if (!world.isRemote) {
+			System.out.println("Flash");
 			RayTraceResult r = pj.rayTrace((float) 20+10*(carga/24), 0);
 			world.playSound(null, pj.getPosition(), SoundEvents.ENTITY_ENDERMEN_TELEPORT, SoundCategory.PLAYERS, 1.0f, 1.0f);
 			pj.attemptTeleport(r.hitVec.x, r.hitVec.y, r.hitVec.z);

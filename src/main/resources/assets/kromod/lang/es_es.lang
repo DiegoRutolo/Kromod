@@ -6,8 +6,10 @@ tile.oricalco_ore.name=Mena de Oricalco
 
 item.escotraco_dust.name=Polvo de Escotraco
 item.escotraco_ingot.name=Lingote de Escotraco
-item.oricalco_ingot.name=Lingote de Oricalco
+item.oricalco_ingot.name=Lingote de Oricalco.
+
 item.galleta_magica.name=Galleta mágica
+item.gema_curacion.name=Gema de curación
 
 item.cetro.name=Cetro mágico
 item.grimorio.name=Grimorio
