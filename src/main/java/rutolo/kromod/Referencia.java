@@ -36,7 +36,7 @@ public class Referencia {
 	public static final String CETRO = "cetro";
 	public static final String GRIMORIO = "grimorio";
 	// hechizos
-	public static final String H_FLASH = "h_flash";
+	public static final String H_SHUNPO = "h_shunpo";
 	public static final String H_BOLA_DE_FUEGO = "h_bola_de_fuego";
 	public static final String H_EMPUJON = "h_empujon";
 	public static final String H_TIRON = "h_tiron";

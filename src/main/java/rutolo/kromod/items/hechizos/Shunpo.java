@@ -5,10 +5,10 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.RayTraceResult;
 import rutolo.kromod.Referencia;
 
-public class Flash extends Hechizo {
+public class Shunpo extends Hechizo {
 	
-	public Flash() {
-		super(Referencia.H_FLASH, 2);
+	public Shunpo() {
+		super(Referencia.H_SHUNPO, 2);
 	}
 
 	@Override
