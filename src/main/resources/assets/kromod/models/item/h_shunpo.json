@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "kromod:items/h_flash"
+        "layer0": "kromod:items/h_shunpo"
      }
 }
