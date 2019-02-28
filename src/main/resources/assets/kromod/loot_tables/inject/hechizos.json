@@ -1,0 +1,23 @@
+{
+	"pools": [{
+		"name": "main",
+		"rolls": 1,
+		"entries": [
+			{
+				"type": "item",
+				"name": "kromod:h_bola_de_fuego",
+				"weight": 2
+			},
+			{
+				"type": "item",
+				"name": "kromod:h_shunpo",
+				"weight": 1
+			},
+			{
+				"type": "item",
+				"name": "kromod:h_empujon",
+				"weight": 1
+			}
+		]
+	}]
+}

@@ -10,6 +10,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -46,7 +48,7 @@ public class Krominit {
 	public static Map<String,Item>	items	= new HashMap<String,Item>();
 	public static Map<String,Block>	bloques	= new HashMap<String,Block>();
 	
-	public static void init() {
+	public static void itemsYbloques() {
 		items.put(Referencia.GALLETA_MAGICA, new GalletaMagica());
 		items.put(Referencia.GEMA_CURACION, new GemaCuracion());
 		
@@ -69,6 +71,10 @@ public class Krominit {
 	
 	public static void recetas() {
 		GameRegistry.addSmelting(bloques.get(Referencia.ORICALCO_ORE), new ItemStack(items.get(Referencia.ORICALCO_INGOT)), 0.9f);
+	}
+	
+	public static void lootTables() {
+		LootTableList.register(new ResourceLocation(Referencia.MODID, "hechizos"));
 	}
 	
 	@SubscribeEvent

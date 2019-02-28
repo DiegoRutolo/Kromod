@@ -1,5 +1,6 @@
 package rutolo.kromod;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -18,15 +19,15 @@ public class Kromod {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Krominit.init();
-		
+		Krominit.itemsYbloques();
+		Krominit.lootTables();
+		MinecraftForge.EVENT_BUS.register(new KromEventHandler());
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		Krominit.recetas();
 		GameRegistry.registerWorldGenerator(new OreGen(), 0);
-		
 	}
 	
 	@EventHandler
