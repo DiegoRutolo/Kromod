@@ -71,11 +71,7 @@ public class Krominit {
 	public static void recetas() {
 		GameRegistry.addSmelting(bloques.get(Referencia.ORICALCO_ORE), new ItemStack(items.get(Referencia.ORICALCO_INGOT)), 0.9f);
 	}
-	
-	public static void lootTables() {
-		LootTableList.register(new ResourceLocation(Referencia.MODID, "hechizos"));
-	}
-	
+
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		for (Map.Entry<String,Block> entrada : bloques.entrySet()) {

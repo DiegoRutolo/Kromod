@@ -20,8 +20,7 @@ public class Kromod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		Krominit.itemsYbloques();
-		Krominit.lootTables();
-		MinecraftForge.EVENT_BUS.register(new KromEventHandler());
+		MinecraftForge.EVENT_BUS.register(new LootHandler());
 	}
 	
 	@EventHandler
