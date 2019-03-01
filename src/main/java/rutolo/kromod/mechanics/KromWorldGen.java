@@ -27,6 +27,8 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.structure.template.PlacementSettings;
 import net.minecraft.world.gen.structure.template.Template;
 import net.minecraft.world.gen.structure.template.TemplateManager;
+import net.minecraft.world.storage.loot.LootTable;
+import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import rutolo.kromod.Krominit;
 import rutolo.kromod.Referencia;
@@ -113,24 +115,29 @@ public class KromWorldGen implements IWorldGenerator {
 		Map<BlockPos, String> map = template.getDataBlocks(pos, placementSettings);
 		for (Entry<BlockPos, String> e : map.entrySet()) {
 			String inv = e.getValue();
-			switch (inv) {
-				case "biblio_baul":
-				case "lab_baul":
-				case "atic_baul":
-				case "lab_pot":
-					BlockPos pos2 = e.getKey();
-					world.setBlockState(pos2.up(), Blocks.AIR.getDefaultState(), 3);
-					TileEntity tileEntity = world.getTileEntity(pos2);
-					
-					if (tileEntity instanceof TileEntityChest) {
-						((TileEntityChest) tileEntity).setLootTable(new ResourceLocation(Referencia.MODID+":tabla_generica"), rnd.nextLong());
+			if (inv.endsWith("arm")) {
+				
+			} else {
+				BlockPos pos2 = e.getKey();
+				world.setBlockState(pos2.up(), Blocks.AIR.getDefaultState(), 3);
+				TileEntity tileEntity = world.getTileEntity(pos2);
+				
+				if (tileEntity instanceof TileEntityChest) {
+					if (inv.equals("biblio_baul")) {
+						((TileEntityChest) tileEntity).setLootTable(LootTableList.CHESTS_STRONGHOLD_LIBRARY, rnd.nextLong());
+					} else {
+						((TileEntityChest) tileEntity).setLootTable(new ResourceLocation(Referencia.MODID+":torre/"+inv), rnd.nextLong());
 					}
-					break;
-				case "hall_arm":
-					break;
-				default:
-					break;
+				}
 			}
+			
+			/*
+			 * biblio_baul
+			 * lab_baul
+			 * atic_baul
+			 * lab_pot
+			 * hall_arm
+			 */
 		}
 		
 		return true;
