@@ -22,7 +22,6 @@ public class Empujon extends Hechizo {
 			if (true) {
 				System.out.println("\n"+x+"\n"+y+"\n"+z);
 				obj.move(MoverType.PISTON, x, y, z);
-				
 			}
 		}
 	}

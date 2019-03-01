@@ -22,11 +22,10 @@ import rutolo.kromod.blocks.BloqueMagico;
 import rutolo.kromod.blocks.OreMagico;
 import rutolo.kromod.items.CetroMagico;
 import rutolo.kromod.items.GalletaMagica;
+import rutolo.kromod.items.GemaCuracion;
 import rutolo.kromod.items.Grimorio;
 import rutolo.kromod.items.ItemMagico;
-import rutolo.kromod.items.GemaCuracion;
 import rutolo.kromod.items.hechizos.BolaDeFuego;
-import rutolo.kromod.items.hechizos.Empujon;
 import rutolo.kromod.items.hechizos.Shunpo;
 
 @Mod.EventBusSubscriber(modid=Referencia.MODID)
@@ -66,7 +65,7 @@ public class Krominit {
 		
 		items.put(Referencia.H_SHUNPO, new Shunpo());
 		items.put(Referencia.H_BOLA_DE_FUEGO, new BolaDeFuego());
-		items.put(Referencia.H_EMPUJON, new Empujon());
+//		items.put(Referencia.H_EMPUJON, new Empujon());
 	}
 	
 	public static void recetas() {
