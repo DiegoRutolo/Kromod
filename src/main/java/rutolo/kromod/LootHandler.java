@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class LootHandler {
 	
 	private static final String[] TABLAS = {
+		"tabla_generica",
 		"inject/cetro",
 		"inject/hechizos"
 	};
@@ -38,10 +39,10 @@ public class LootHandler {
 				case "stronghold_corridor":
 				case "village_blacksmith":
 				case "spawn_bonus_chest":
-					LootEntry e = new LootEntryTable(new ResourceLocation("kromod:inject/cetro"), 1, 1, null, "krom_cetro_inj_entry");
+					LootEntry e = new LootEntryTable(new ResourceLocation(Referencia.MODID+":inject/cetro"), 1, 1, null, "krom_cetro_inj_entry");
 					LootPool p = new LootPool(new LootEntry[] {e}, new LootCondition[0], new RandomValueRange(1, 1), new RandomValueRange(0), "krom_cetro_inj_pool");
 					ev.getTable().addPool(p);
-					e = new LootEntryTable(new ResourceLocation("kromod:inject/hechizos"), 1, 1, null, "krom_hechizo_inj_entry");
+					e = new LootEntryTable(new ResourceLocation(Referencia.MODID+":inject/hechizos"), 1, 1, null, "krom_hechizo_inj_entry");
 					p = new LootPool(new LootEntry[] {e}, new LootCondition[0], new RandomValueRange(1, 1), new RandomValueRange(0), "krom_hechizo_inj_pool");
 					ev.getTable().addPool(p);
 					break;
