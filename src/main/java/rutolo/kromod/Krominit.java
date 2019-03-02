@@ -10,8 +10,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -25,6 +23,7 @@ import rutolo.kromod.items.GalletaMagica;
 import rutolo.kromod.items.GemaCuracion;
 import rutolo.kromod.items.Grimorio;
 import rutolo.kromod.items.ItemMagico;
+import rutolo.kromod.items.armor.GorroMagico;
 import rutolo.kromod.items.hechizos.BolaDeFuego;
 import rutolo.kromod.items.hechizos.Shunpo;
 
@@ -59,6 +58,8 @@ public class Krominit {
 		
 		items.put(Referencia.ESCOTRACO_DUST, new ItemMagico(Referencia.ESCOTRACO_DUST).setMaxStackSize(16));
 		bloques.put(Referencia.ESCOTRACO_ORE, new OreMagico(Referencia.ESCOTRACO_ORE, items.get(Referencia.ESCOTRACO_DUST), 1, 3));
+		
+		items.put(Referencia.GORRO_MAGICO, new GorroMagico());
 		
 		items.put(Referencia.CETRO, new CetroMagico());
 		items.put(Referencia.GRIMORIO, new Grimorio());

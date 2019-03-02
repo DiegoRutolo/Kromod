@@ -35,6 +35,8 @@ public class Referencia {
 	// items magicos
 	public static final String CETRO = "cetro";
 	public static final String GRIMORIO = "grimorio";
+	// armadura magica
+	public static final String GORRO_MAGICO = "gorro_magico";
 	// hechizos
 	public static final String H_SHUNPO = "h_shunpo";
 	public static final String H_BOLA_DE_FUEGO = "h_bola_de_fuego";
