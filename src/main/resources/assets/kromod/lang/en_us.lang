@@ -21,3 +21,5 @@ item.h_empujon.name=Push
 item.h_tiron.name=Pull
 item.h_pozo_de_lava.name=Lava pit
 item.h_revelar.name=Reveal
+
+tile.desiluminador.name=Deluminator

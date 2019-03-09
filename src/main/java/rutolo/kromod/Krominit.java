@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import rutolo.kromod.blocks.BloqueMagico;
 import rutolo.kromod.blocks.OreMagico;
+import rutolo.kromod.blocks.desiluminador.BlockDesiluminador;
 import rutolo.kromod.items.CetroMagico;
 import rutolo.kromod.items.GalletaMagica;
 import rutolo.kromod.items.GemaCuracion;
@@ -67,6 +68,8 @@ public class Krominit {
 		items.put(Referencia.H_SHUNPO, new Shunpo());
 		items.put(Referencia.H_BOLA_DE_FUEGO, new BolaDeFuego());
 //		items.put(Referencia.H_EMPUJON, new Empujon());
+		
+		bloques.put(Referencia.DESILUMINADOR, new BlockDesiluminador());
 	}
 	
 	public static void recetas() {

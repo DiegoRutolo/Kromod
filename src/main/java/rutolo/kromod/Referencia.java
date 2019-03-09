@@ -49,6 +49,10 @@ public class Referencia {
 	public static final String GALLETA_MAGICA = "galleta_magica";
 	public static final String GEMA_CURACION = "gema_curacion";
 	
+	//maquinas
+	public static final String DESILUMINADOR = "desiluminador";
+	public static final int GUI_DESILUMINADOR = 0;
+	
 	
 	public static void removeExperience(EntityPlayer entity, int amount){
 		if (entity.experienceTotal-amount <= 0) {

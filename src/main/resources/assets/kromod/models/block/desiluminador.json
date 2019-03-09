@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "kromod:blocks/desiluminador_top",
+        "side": "kromod:blocks/desiluminador_side"
+    }
+}

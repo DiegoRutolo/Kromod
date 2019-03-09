@@ -21,3 +21,5 @@ item.h_empujon.name=Empujon
 item.h_tiron.name=Tiron
 item.h_pozo_de_lava.name=Pozo de lava
 item.h_revelar.name=Revelar
+
+tile.desiluminador.name=Desiluminador
