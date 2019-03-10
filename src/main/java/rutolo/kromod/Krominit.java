@@ -50,6 +50,7 @@ public class Krominit {
 	public static void itemsYbloques() {
 		items.put(Referencia.GALLETA_MAGICA, new GalletaMagica());
 		items.put(Referencia.GEMA_CURACION, new GemaCuracion());
+		// TODO: implementar chispa de luz, que haga brillar objetos al usarla.
 		
 		bloques.put(Referencia.ORICALCO_ORE, new OreMagico(Referencia.ORICALCO_ORE));
 		items.put(Referencia.ORICALCO_INGOT, new ItemMagico(Referencia.ORICALCO_INGOT));

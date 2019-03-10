@@ -8,7 +8,7 @@ public class ItemMagico extends Item {
 	public final String nombre;
 	
 	public ItemMagico (String nombre) {
-		this(nombre, 1);
+		this(nombre, 64);
 	}
 	
 	public ItemMagico (String nombre, int maxStack) {

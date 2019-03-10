@@ -15,7 +15,7 @@ public class CetroMagico extends ItemMagico {
 	private final static int TMAX = 20*10;
 	
 	public CetroMagico() {
-		super(Referencia.CETRO);
+		super(Referencia.CETRO, 1);
 	}
 	
 	@Override

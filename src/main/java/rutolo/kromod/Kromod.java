@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import rutolo.kromod.mechanics.KromWorldGen;
 import rutolo.kromod.network.KromPacketHandler;
@@ -27,6 +28,7 @@ public class Kromod {
 	public void init(FMLInitializationEvent event) {
 		Krominit.recetas();
 		GameRegistry.registerWorldGenerator(new KromWorldGen(), 0);
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new KromGuiHandler());
 	}
 	
 	@EventHandler

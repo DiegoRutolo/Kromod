@@ -48,4 +48,6 @@ public class GorroMagico extends ItemArmor {
     {
         return Referencia.MODID+":textures/models/armor/"+Referencia.GORRO_MAGICO+".png";
     }
+	
+	// TODO: hacer que de experiencia periodicamente
 }

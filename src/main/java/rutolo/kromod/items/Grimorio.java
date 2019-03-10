@@ -10,7 +10,7 @@ import rutolo.kromod.mechanics.InventarioGrimorio;
 
 public class Grimorio extends ItemMagico {
 	public Grimorio() {
-		super(Referencia.GRIMORIO);
+		super(Referencia.GRIMORIO, 1);
 	}
 	
 	@Override
